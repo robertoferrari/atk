@@ -31,13 +31,17 @@ ATK.Tabs = {
         }).each(function (tr) {
             if (expand) {
                 Element.show(tr);
-                element.removeClassName('closedSection');
-                element.addClassName('openedSection');
+                //element.removeClassName('closedSection');
+                //element.addClassName('openedSection');
+                icon.removeClassName('fa-plus-square-o');
+                icon.addClassName('fa-minus-square-o');
                 ATK.Tabs.closedSections = ATK.Tabs.closedSections.without(element.id);
             } else {
                 Element.hide(tr);
-                element.removeClassName('openedSection');
-                element.addClassName('closedSection');
+                //element.removeClassName('openedSection');
+                //element.addClassName('closedSection');
+                icon.removeClassName('fa-minus-square-o');
+                icon.addClassName('fa-plus-square-o');
                 ATK.Tabs.closedSections.push(element.id);
             }
         });
