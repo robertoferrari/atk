@@ -379,8 +379,8 @@ class Page
     {
         $res = '';
         $this->addMeta($res);
-        $this->addScripts($res);
         $this->addStyles($res);
+        $this->addScripts($res);
 
         $favico = Config::getGlobal('defaultfavico');
         if ($favico != '') {
